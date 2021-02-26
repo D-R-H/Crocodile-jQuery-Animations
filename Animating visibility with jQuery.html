@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Animating visibility with jQuery</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link data-vue-tag="ssr" rel="icon" href="data:,">
+        <link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="data:image/png;base64,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">
+        <link rel="manifest" href="/site.webmanifest">
+        <style>
+            #croc-pic {
+                border: 1px solid green;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <button id="Button" type="button" class="btn btn-danger">Animate!</button>
+        </div>
+
+        <br>
+
+        <img id="croc-pic" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Crocodylus_acutus_mexico_02-edit1.jpg">
+        <h1 id="croc-text">American Crocodile</h1>
+
+        <script>
+    $("#Button").click(function(){
+        $("#croc-pic").hide();
+        $("#croc-text").hide();
+        $("#croc-pic").fadeIn(2000, function() {
+            $("#croc-text").fadeIn(2000);
+        });
+    });
+      </script>
+
+    </body>
+</html>
